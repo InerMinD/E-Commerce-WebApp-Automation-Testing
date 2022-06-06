@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber HTML Reports</td>
+        <td>1</td>
+      <td>06 Jun 2022, 16:39</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">org.example.stepDefs.D01_registerstepdef.click_REGISTER1()</td>
+              <td>1</td>
+              <td class="duration" data-value="9495000000">9.495</td>
+              <td class="duration" data-value="9495000000">9.495</td>
+              <td class="duration" data-value="9495000000">9.495</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D01_registerstepdef.fill_data()</td>
+              <td>1</td>
+              <td class="duration" data-value="8881000000">8.881</td>
+              <td class="duration" data-value="8881000000">8.881</td>
+              <td class="duration" data-value="8881000000">8.881</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D01_registerstepdef.register_Home()</td>
+              <td>1</td>
+              <td class="duration" data-value="7475000000">7.475</td>
+              <td class="duration" data-value="7475000000">7.475</td>
+              <td class="duration" data-value="7475000000">7.475</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D01_registerstepdef.register_flash_msg()</td>
+              <td>1</td>
+              <td class="duration" data-value="264000000">0.264</td>
+              <td class="duration" data-value="264000000">0.264</td>
+              <td class="duration" data-value="264000000">0.264</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D01_registerstepdef.register_success_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="270000000">0.270</td>
+              <td class="duration" data-value="270000000">0.270</td>
+              <td class="duration" data-value="270000000">0.270</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D02_loginstepdef.My_Account_Tab()</td>
+              <td>1</td>
+              <td class="duration" data-value="442000000">0.442</td>
+              <td class="duration" data-value="442000000">0.442</td>
+              <td class="duration" data-value="442000000">0.442</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D02_loginstepdef.click_login_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="4222000000">4.222</td>
+              <td class="duration" data-value="4222000000">4.222</td>
+              <td class="duration" data-value="4222000000">4.222</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D02_loginstepdef.fill_login_data(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="236000000">0.236</td>
+              <td class="duration" data-value="236000000">0.236</td>
+              <td class="duration" data-value="236000000">0.236</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D02_loginstepdef.go_Home()</td>
+              <td>1</td>
+              <td class="duration" data-value="11000000">0.011</td>
+              <td class="duration" data-value="11000000">0.011</td>
+              <td class="duration" data-value="11000000">0.011</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D02_loginstepdef.login_Home()</td>
+              <td>1</td>
+              <td class="duration" data-value="4151000000">4.151</td>
+              <td class="duration" data-value="4151000000">4.151</td>
+              <td class="duration" data-value="4151000000">4.151</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D03_currencystepdef.currency_swap()</td>
+              <td>1</td>
+              <td class="duration" data-value="7259000000">7.259</td>
+              <td class="duration" data-value="7259000000">7.259</td>
+              <td class="duration" data-value="7259000000">7.259</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D04_searchstepdef.clicks_searchbar()</td>
+              <td>1</td>
+              <td class="duration" data-value="1487000000">1.487</td>
+              <td class="duration" data-value="1487000000">1.487</td>
+              <td class="duration" data-value="1487000000">1.487</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D04_searchstepdef.search_results()</td>
+              <td>1</td>
+              <td class="duration" data-value="163000000">0.163</td>
+              <td class="duration" data-value="163000000">0.163</td>
+              <td class="duration" data-value="163000000">0.163</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D04_searchstepdef.search_store()</td>
+              <td>1</td>
+              <td class="duration" data-value="4973000000">4.973</td>
+              <td class="duration" data-value="4973000000">4.973</td>
+              <td class="duration" data-value="4973000000">4.973</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D05_hovercatstepdef.subcategory_select()</td>
+              <td>1</td>
+              <td class="duration" data-value="69000000">0.069</td>
+              <td class="duration" data-value="69000000">0.069</td>
+              <td class="duration" data-value="69000000">0.069</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D05_hovercatstepdef.user_hover_category()</td>
+              <td>1</td>
+              <td class="duration" data-value="4075000000">4.075</td>
+              <td class="duration" data-value="4075000000">4.075</td>
+              <td class="duration" data-value="4075000000">4.075</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D06_homeSlidersStepdef.iphone_product_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="67000000">0.067</td>
+              <td class="duration" data-value="67000000">0.067</td>
+              <td class="duration" data-value="67000000">0.067</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D06_homeSlidersStepdef.nokia_product_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D06_homeSlidersStepdef.sliders2_select()</td>
+              <td>1</td>
+              <td class="duration" data-value="6976000000">6.976</td>
+              <td class="duration" data-value="6976000000">6.976</td>
+              <td class="duration" data-value="6976000000">6.976</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D06_homeSlidersStepdef.sliders_select()</td>
+              <td>1</td>
+              <td class="duration" data-value="10042000000">10.042</td>
+              <td class="duration" data-value="10042000000">10.042</td>
+              <td class="duration" data-value="10042000000">10.042</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D07_followUSstepdef.Rss_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="3316000000">3.316</td>
+              <td class="duration" data-value="3316000000">3.316</td>
+              <td class="duration" data-value="3316000000">3.316</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D07_followUSstepdef.Rss_tab()</td>
+              <td>1</td>
+              <td class="duration" data-value="2018000000">2.018</td>
+              <td class="duration" data-value="2018000000">2.018</td>
+              <td class="duration" data-value="2018000000">2.018</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D07_followUSstepdef.Youtube_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="155000000">0.155</td>
+              <td class="duration" data-value="155000000">0.155</td>
+              <td class="duration" data-value="155000000">0.155</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D07_followUSstepdef.Youtube_tab()</td>
+              <td>1</td>
+              <td class="duration" data-value="29804000000">29.804</td>
+              <td class="duration" data-value="29804000000">29.804</td>
+              <td class="duration" data-value="29804000000">29.804</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D07_followUSstepdef.face_tab()</td>
+              <td>1</td>
+              <td class="duration" data-value="4442000000">4.442</td>
+              <td class="duration" data-value="4442000000">4.442</td>
+              <td class="duration" data-value="4442000000">4.442</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D07_followUSstepdef.facebook_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="344000000">0.344</td>
+              <td class="duration" data-value="344000000">0.344</td>
+              <td class="duration" data-value="344000000">0.344</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D07_followUSstepdef.twit_tab()</td>
+              <td>1</td>
+              <td class="duration" data-value="182057000000">3:2.057</td>
+              <td class="duration" data-value="182057000000">3:2.057</td>
+              <td class="duration" data-value="182057000000">3:2.057</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D07_followUSstepdef.twitter_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="185000000">0.185</td>
+              <td class="duration" data-value="185000000">0.185</td>
+              <td class="duration" data-value="185000000">0.185</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D08_Shoppingcartstepdef.add_to_cart_click()</td>
+              <td>1</td>
+              <td class="duration" data-value="102000000">0.102</td>
+              <td class="duration" data-value="102000000">0.102</td>
+              <td class="duration" data-value="102000000">0.102</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D08_Shoppingcartstepdef.product_add_to_cart()</td>
+              <td>1</td>
+              <td class="duration" data-value="19000000">0.019</td>
+              <td class="duration" data-value="19000000">0.019</td>
+              <td class="duration" data-value="19000000">0.019</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D09_Wishliststepdef.product_added_to_wishlist()</td>
+              <td>1</td>
+              <td class="duration" data-value="48000000">0.048</td>
+              <td class="duration" data-value="48000000">0.048</td>
+              <td class="duration" data-value="48000000">0.048</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D09_Wishliststepdef.wishlist_button_click()</td>
+              <td>1</td>
+              <td class="duration" data-value="138000000">0.138</td>
+              <td class="duration" data-value="138000000">0.138</td>
+              <td class="duration" data-value="138000000">0.138</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D09_Wishliststepdef.wishlist_tab_click()</td>
+              <td>1</td>
+              <td class="duration" data-value="2286000000">2.286</td>
+              <td class="duration" data-value="2286000000">2.286</td>
+              <td class="duration" data-value="2286000000">2.286</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D10_resetpasswordstepdef.email_enters()</td>
+              <td>1</td>
+              <td class="duration" data-value="1547000000">1.547</td>
+              <td class="duration" data-value="1547000000">1.547</td>
+              <td class="duration" data-value="1547000000">1.547</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D10_resetpasswordstepdef.email_send()</td>
+              <td>1</td>
+              <td class="duration" data-value="46000000">0.046</td>
+              <td class="duration" data-value="46000000">0.046</td>
+              <td class="duration" data-value="46000000">0.046</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.D10_resetpasswordstepdef.password_recovery_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="6127000000">6.127</td>
+              <td class="duration" data-value="6127000000">6.127</td>
+              <td class="duration" data-value="6127000000">6.127</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.Hooks.Open_Browser()</td>
+              <td>14</td>
+              <td class="duration" data-value="26946857142">26.946</td>
+              <td class="duration" data-value="26946857142">1:57.504</td>
+              <td class="duration" data-value="377256000000">6:17.256</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.stepDefs.Hooks.quitDriver()</td>
+              <td>14</td>
+              <td class="duration" data-value="4729428571">4.729</td>
+              <td class="duration" data-value="4729428571">25.058</td>
+              <td class="duration" data-value="66212000000">1:6.212</td>
+              <td class="failed">92.86%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>38</td>
+            <td>64</td>
+            <td class="duration">11.666</td>
+            <td class="duration">6:17.256</td>
+            <td class="duration">12:26.661</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

@@ -18,3 +18,6 @@
 -adding items to wishlist
 -resetpassword
 -selecting different tags
+
+### Required plugins and enviroment variables
+- u can find all required plugins and variables in screenshots

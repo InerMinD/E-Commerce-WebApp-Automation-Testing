@@ -2,8 +2,8 @@
 
 ## FWD E-commerce App Automation Testing
 ### i test features at https://demo.nopcommerce.com/
--- Folder(Src) 
-###(Test Case scenarios in main/resources/features/,step defs in test/java/org/example/stepDefs/, Test Runner in test/java/org/example/runners/<)
+### folder-(Src) has
+-Test Case scenarios in main/resources/features/,step defs in test/java/org/example/stepDefs/, Test Runner in test/java/org/example/runners/)
 
 ### to run all scenarios use test runner
 

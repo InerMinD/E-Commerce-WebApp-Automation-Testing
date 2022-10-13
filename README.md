@@ -8,16 +8,16 @@
 ### to run all scenarios use test runner
 
 ### Features tested in project
--register
--login
--currency switch
--search function
--homesliders
--followus links
--adding items to shopcart
--adding items to wishlist
--resetpassword
--selecting different tags
+- register
+- login
+- currency switch
+- search function
+- homesliders
+- followus links
+- adding items to shopcart
+- adding items to wishlist
+- resetpassword
+- selecting different tags
 
 ### Required plugins and enviroment variables
 - u can find all required plugins and variables in screenshots
